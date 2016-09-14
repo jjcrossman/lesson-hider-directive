@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="directivePractice">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+        <style>
+        li {
+          display: inline-block;
+        }
+        </style>
+    </head>
+    <body ng-controller="lessonCtrl">
+      <ul>
+      <lesson-hider
+      lesson="lesson"
+      day-alert="announceDay( lesson, day )"
+      delete-lesson="deleteLesson( $index )"
+      ng-repeat="lesson in lessons"
+      ></lesson-hider>
+    </ul>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script> -->
+        <script type="text/javascript" src="./app.js"></script>
+        <script type="text/javascript" src="./lessonCtrl.js"></script>
+        <script type="text/javascript" src="./lessonHider.js"></script>
+        <script type="text/javascript" src="./lessonService.js"></script>
+
+    </body>
+</html>

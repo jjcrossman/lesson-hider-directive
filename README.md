@@ -198,7 +198,7 @@ is that this controller can only apply to this directive. Knowing that this cont
 and `lessonService` just like we're used to.
 
 Since we're injecting `lessonService`, let's go add the function we need. Create a method named `getSchedule` that simply returns a GET request to your
-schedule.json (You probably haven't done an $http request to one of your own files before, but it works just the same. `return $http.get('schedule.json');`).
+schedule.json (You probably haven't done an $http request to one of your own files before, but it works just the same. `return $http.get('schedule.json');`.
 
 Because we've injected `lessonService` into our directive's controller we can now access that function in the same way we are used to in other controllers.
 Let's assign the return value of `lessonService.getSchedule()` to a new value called `$scope.getSchedule`. You may have noticed that we still haven't called a
@@ -246,7 +246,7 @@ used when you need to manipulate the DOM, and it will feel a lot like jQuery (be
 we're going back to some basics.
 
 First of all we will need to loop through our schedule array and check whether `scope.lesson` matches a lesson that is already scheduled. If we find the value
-then we need to do some basic jQuery to strike throuh that list item. It's also a good idea to tell your function to also `return;` if it finds the value,
+then we need to do some basic jQuery to strike through that list item. It's also a good idea to tell your function to also `return;` if it finds the value,
 preventing your loop from continuing to run after you've found the lesson.
 
 Our directive now has functionality and is an example of a real world use case! But there's still more we can do!
@@ -337,4 +337,3 @@ prohibited. Excerpts and links may be used, provided that full and clear credit 
 content.
 
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250">
-
